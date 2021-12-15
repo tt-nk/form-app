@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="border col-7">
+    <h3>入力フォーム</h3>
+    <br>
+    <form method="POST" action="{{url_for('form')}}">
+        {{form.csrf_token}}
+        {{ form.username.label }}
+        {{ form.username }}
+        <div>
+            {% for error in form.username.errors %}
+            <span style="color:red;">{{error}}</span>
+            {% endfor %}
+        </div>
+        <br>
+        {{ form.password.label }}
+        {{ form.password }}
+        <br>
+        {{ form.submit}}
+    </form>
+</div>
+{% endblock %}

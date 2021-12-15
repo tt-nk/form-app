@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1></h1>
+{% if user and pass_info %}
+<p>{{user}}</p>
+<form action="">
+    <input type="text" placeholder="username">
+</form>
+<p>{{pass_info}}</p>
+<form action="">
+    <input type="text" placeholder="password">
+</form>
+{% else %}
+<p>ログオン完了</p>
+{% endif %}
+{% endblock %}

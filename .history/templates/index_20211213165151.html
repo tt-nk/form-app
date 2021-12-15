@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>ユーザー登録</h1>
+{% if user and pass_info %}
+<form method='POST'>
+    <label for="">ユーザー名</label>
+    <input type="text" name="username">
+    <label for="">パスワード</label>
+    <input type="password" name="password">
+    <input type="submit" name="新規登録">
+</form>
+{% else %}
+<p>logon completed</p>
+{% endif %}
+{% endblock %}
